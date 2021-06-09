@@ -12,5 +12,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show, :edit, :update]
   resources :groups do
     get "join" => "groups#join"
+    get "new/mail" => "groups#new_mail"
+    get "send/mail" => "groups#send_mail"
   end
 end
